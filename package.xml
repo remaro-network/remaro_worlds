@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<package format="2">
+
+  <name>remaro_worlds</name>
+  <version>0.0.1</version>
+  <description>The remaro_worlds package</description>
+  <license>todo</license>
+  
+  <author email="jcoffelt@rosen-gropu.com">Jeremy Coffelt</author>
+  <maintainer email="jcoffelt@rosen-gropu.com">Jeremy Coffelt</maintainer>
+  <url type="website">https://github.com/jpcoffelt/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>gazebo_ros</depend>
+
+  <export>
+    <gazebo_ros gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models"/>
+  </export>
+
+</package>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <gui>
+      <camera name="user_camera">
+        <pose>-50 -2 -17 0 0.25 0.25</pose>
+      </camera> 
+    </gui> 
+  </world> 
+</sdf>

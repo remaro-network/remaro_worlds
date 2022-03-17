@@ -1,0 +1,6 @@
+need auv subdirectory in models
+move lights from empty_world.world to lit_world.world
+create lit_world.launch
+add inertial data to model.sdf so joints behave correctly
+add joint controller
+create URDF

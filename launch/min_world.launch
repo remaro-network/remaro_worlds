@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<launch>
+	<arg name="paused" default="true" />
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="paused" value="$(arg paused)" />
+		<arg name="world_name" value="$(find remaro_worlds)/worlds/min_world.world" />
+	</include>
+
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find remaro_worlds)/urdf/min_world.urdf -urdf -model min_world" />
+
+</launch>
