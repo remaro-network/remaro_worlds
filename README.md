@@ -50,8 +50,10 @@ echo "source ~/yourworkspacename/devel/setup.bash" >> ~/.bashrc
 ```
 
 ## Usage
-
-Coming soon
+```bash
+# To launch the simulated world
+roslaunch remaro_worlds min_world.launch
+```
 
 ## Acknowledgements
 This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 956200.
