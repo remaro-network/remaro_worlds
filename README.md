@@ -52,7 +52,7 @@ echo "source ~/yourworkspacename/devel/setup.bash" >> ~/.bashrc
 ## Usage
 ```bash
 # To launch the simulated world
-roslaunch remaro_worlds min_world.launch
+roslaunch remaro_worlds min_pipes.launch
 ```
 
 ## Acknowledgements
