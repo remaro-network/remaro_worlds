@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="walls">
+
+    <!-- Base Ignition Gazebo plugins -->
+    <plugin
+        filename="ignition-gazebo-physics-system"
+        name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <plugin
+        filename="ignition-gazebo-user-commands-system"
+        name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+    <plugin
+        filename="ignition-gazebo-scene-broadcaster-system"
+        name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+
+    <!-- IMU plugin manages all IMU sensors -->
+    <plugin filename="libignition-gazebo-imu-system.so"
+            name="ignition::gazebo::systems::Imu">
+    </plugin>
+
+    <!-- To be able to use the lidar sensor -->
+    <plugin filename="libignition-gazebo-sensors-system.so"
+            name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Buoyancy plugin manages buoyancy for all models -->
+    <plugin
+        filename="ignition-gazebo-buoyancy-system"
+        name="ignition::gazebo::systems::Buoyancy">
+      <graded_buoyancy>
+        <default_density>1000</default_density>
+        <density_change>
+          <above_depth>0</above_depth>
+          <density>1</density>
+        </density_change>
+      </graded_buoyancy>
+    </plugin>
+
+    <!-- Global light source -->
+    <light type="directional" name="sun">
+      <pose>0 0 150 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>.1 .1 .1 1</specular>
+      <direction>0.3 0.3 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+    <!-- Global light source -->
+    <light type="directional" name="sun_diffuse">
+      <pose>0 0 -150 0 0 0</pose>
+      <diffuse>0.6 0.6 0.6 1</diffuse>
+      <specular>0 0 0 1</specular>
+      <direction>-0.3 -0.3 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+    <include>
+      <uri>model://min_pipes_environment</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <static>true</static>
+      <name>Wall1</name>
+      <pose>12.15 -10 -20 0 0 0</pose>
+      <uri>model://Grey Wall</uri>
+    </include>
+
+    <include>
+       <static>true</static>
+       <name>Wall2</name>
+       <pose>4.65 -10 -20 0 0 0</pose>
+       <uri>model://Grey Wall</uri>
+    </include>
+
+    <include>
+       <static>true</static>
+       <name>Wall3</name>
+       <pose>1 -6.15 -20 0 0 1.57</pose>
+       <uri>model://Grey Wall</uri>
+    </include>
+
+    <include>
+       <static>true</static>
+       <name>Wall4</name>
+       <pose>1 1.35 -20 0 0 1.57</pose>
+       <uri>model://Grey Wall</uri>
+    </include>
+
+  </world>
+</sdf>
