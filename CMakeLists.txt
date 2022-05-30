@@ -10,6 +10,6 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-install(DIRECTORY launch Media worlds models
+install(DIRECTORY launch Media worlds models urdf
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
         PATTERN "*~" EXCLUDE)
