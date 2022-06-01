@@ -38,8 +38,6 @@
           <density>1</density>
         </density_change>
       </graded_buoyancy>
-      <!-- Enable by model name -->
-      <enable>bluerov2</enable>
     </plugin>
 
     <!-- Global light source -->
