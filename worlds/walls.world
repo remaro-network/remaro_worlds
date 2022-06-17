@@ -27,6 +27,11 @@
       <render_engine>ogre2</render_engine>
     </plugin>
 
+    <plugin
+      filename="ignition-gazebo-user-commands-system"
+      name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+
     <!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
         filename="ignition-gazebo-buoyancy-system"
