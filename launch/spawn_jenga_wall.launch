@@ -1,0 +1,15 @@
+<launch>
+<!-- Spawn one single jenga wall -->
+  <arg name="robot_name"/>
+  <arg name="init_pose"/>
+
+  <param name="jenga_wall_description" command="$(find xacro)/xacro '$(find remaro_worlds)/urdf/jenga_wall.urdf.xacro'" />
+
+  <node name="spawn_jenga_wall" pkg="gazebo_ros" type="spawn_model"
+   args="-param jenga_wall_description -urdf -model $(arg robot_name)
+   $(arg init_pose) " 
+   respawn="false" output="screen" />
+
+   <node pkg="robot_state_publisher" type="robot_state_publisher" 
+          name="robot_state_publisher" output="screen"/>
+</launch>
