@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="uneven_wall">
+    <static>true</static>
+
+    <link name="single_wall">
+      <collision name="single_wall">
+        <pose>0 0 0 1.57 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://uneven_wall/meshes/jenga_wall.obj</uri>
+            <scale>.4 .4 .4</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="single_wall">
+        <cast_shadows>true</cast_shadows>
+        <pose>0 0 0 1.57 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://uneven_wall/meshes/jenga_wall.obj</uri>
+            <scale>.4 .4 .4</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+
+  </model>
+</sdf>
