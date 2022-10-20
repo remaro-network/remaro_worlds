@@ -68,15 +68,5 @@
       <shadows>1</shadows>
     </scene>
 
-    <include>
-      <uri>model://min_pipes_environment</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
-
-    <include>
-      <uri>model://min_pipes_objects</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
-
   </world>
 </sdf>
