@@ -26,8 +26,8 @@
       </visual>
     </link>
 
-    <link name="container_to_segment1">
-      <collision name="segment1">
+    <link name="pipe_segment1">
+      <collision name="pipe_segment1">
         <pose>-51.56 -15.14 -20 0 0 2.36</pose>
         <geometry>
           <mesh>
@@ -37,7 +37,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment1">
+      <visual name="pipe_segment1">
         <cast_shadows>true</cast_shadows>
         <pose>-51.56 -15.14 -20 0 0 2.36</pose>
         <geometry>
@@ -49,8 +49,8 @@
       </visual>
     </link>
 
-    <link name="segment1_to_segment2">
-      <collision name="segment2">
+    <link name="pipe_segment1_to_segment2">
+      <collision name="pipe_segment2">
         <pose>-44.49 -8.07 -20 0 0 2.36</pose>
         <geometry>
           <mesh>
@@ -60,7 +60,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment2">
+      <visual name="pipe_segment2">
         <cast_shadows>true</cast_shadows>
         <pose>-44.49 -8.07 -20 0 0 2.36</pose>
         <geometry>
@@ -72,8 +72,8 @@
       </visual>
     </link>
 
-    <link name="segment2_to_segment3">
-      <collision name="segment3">
+    <link name="pipe_segment2_to_segment3">
+      <collision name="pipe_segment3">
         <pose>-37.41 -1 -20 0 3.14 2.36</pose>
         <geometry>
           <mesh>
@@ -83,7 +83,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment3">
+      <visual name="pipe_segment3">
         <cast_shadows>true</cast_shadows>
         <pose>-37.41 -1 -20 0 3.14 2.36</pose>
         <geometry>
@@ -95,8 +95,8 @@
       </visual>
     </link>
 
-    <link name="segment3_to_segment4">
-      <collision name="segment4">
+    <link name="pipe_segment3_to_segment4">
+      <collision name="pipe_segment4">
         <pose>-35 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -106,7 +106,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment4">
+      <visual name="pipe_segment4">
         <cast_shadows>true</cast_shadows>
         <pose>-35 0 -20 0 0 1.57</pose>
         <geometry>
@@ -118,8 +118,8 @@
       </visual>
     </link>
 
-    <link name="segment4_to_segment5">
-      <collision name="segment5">
+    <link name="pipe_segment4_to_segment5">
+      <collision name="pipe_segment5">
         <pose>-25 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -129,7 +129,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment5">
+      <visual name="pipe_segment5">
         <cast_shadows>true</cast_shadows>
         <pose>-25 0 -20 0 0 1.57</pose>
         <geometry>
@@ -141,8 +141,8 @@
       </visual>
     </link>
 
-    <link name="segment5_to_segment6">
-      <collision name="segment6">
+    <link name="pipe_segment5_to_segment6">
+      <collision name="pipe_segment6">
         <pose>-15 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -152,7 +152,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment6">
+      <visual name="pipe_segment6">
         <cast_shadows>true</cast_shadows>
         <pose>-15 0 -20 0 0 1.57</pose>
         <geometry>
@@ -164,8 +164,8 @@
       </visual>
     </link>
 
-    <link name="segment6_to_segment7">
-      <collision name="segment7">
+    <link name="pipe_segment6_to_segment7">
+      <collision name="pipe_segment7">
         <pose>-5 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -175,7 +175,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment7">
+      <visual name="pipe_segment7">
         <cast_shadows>true</cast_shadows>
         <pose>-5 0 -20 0 0 1.57</pose>
         <geometry>
@@ -187,8 +187,8 @@
       </visual>
     </link>
 
-    <link name="segment7_to_segment8">
-      <collision name="segment8">
+    <link name="pipe_segment7_to_segment8">
+      <collision name="pipe_segment8">
         <pose>5 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -198,7 +198,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment8">
+      <visual name="pipe_segment8">
         <cast_shadows>true</cast_shadows>
         <pose>5 0 -20 0 0 1.57</pose>
         <geometry>
@@ -210,8 +210,8 @@
       </visual>
     </link>
 
-    <link name="segment8_to_segment9">
-      <collision name="segment9">
+    <link name="pipe_segment8_to_segment9">
+      <collision name="pipe_segment9">
         <pose>15 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -221,7 +221,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment9">
+      <visual name="pipe_segment9">
         <cast_shadows>true</cast_shadows>
         <pose>15 0 -20 0 0 1.57</pose>
         <geometry>
@@ -233,8 +233,8 @@
       </visual>
     </link>
 
-    <link name="segment9_to_segment10">
-      <collision name="segment10">
+    <link name="pipe_segment9_to_segment10">
+      <collision name="pipe_segment10">
         <pose>25 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -244,7 +244,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment10">
+      <visual name="pipe_segment10">
         <cast_shadows>true</cast_shadows>
         <pose>25 0 -20 0 0 1.57</pose>
         <geometry>
@@ -256,8 +256,8 @@
       </visual>
     </link>
 
-    <link name="segment10_to_segment11">
-      <collision name="segment11">
+    <link name="pipe_segment10_to_segment11">
+      <collision name="pipe_segment11">
         <pose>26 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -267,7 +267,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment11">
+      <visual name="pipe_segment11">
         <cast_shadows>true</cast_shadows>
         <pose>26 0 -20 0 0 1.57</pose>
         <geometry>
@@ -279,8 +279,8 @@
       </visual>
     </link>
 
-    <link name="segment11_to_segment12">
-      <collision name="segment12">
+    <link name="pipe_segment11_to_segment12">
+      <collision name="pipe_segment12">
         <pose>36 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -290,7 +290,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment12">
+      <visual name="pipe_segment12">
         <cast_shadows>true</cast_shadows>
         <pose>36 0 -20 0 0 1.57</pose>
         <geometry>
@@ -302,8 +302,8 @@
       </visual>
     </link>
 
-    <link name="segment12_to_segment13">
-      <collision name="segment13">
+    <link name="pipe_segment12_to_segment13">
+      <collision name="pipe_segment13">
         <pose>46 0 -20 0 0 1.57</pose>
         <geometry>
           <mesh>
@@ -313,7 +313,7 @@
         </geometry>
       </collision>
 
-      <visual name="segment13">
+      <visual name="pipe_segment13">
         <cast_shadows>true</cast_shadows>
         <pose>46 0 -20 0 0 1.57</pose>
         <geometry>
