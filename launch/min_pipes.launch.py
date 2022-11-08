@@ -47,8 +47,21 @@ def generate_launch_description():
             '-name', 'min_pipes_objects']
     )
 
+    min_pipes_pipeline_path = os.path.join(
+        remaro_worlds_path, 'models', 'min_pipes_pipeline')
+
+    min_pipes_pipeline_spawn = Node(
+        package='ros_gz_sim',
+        executable='create',
+        arguments=[
+            '-world', 'min_pipes',
+            '-file', min_pipes_pipeline_path,
+            '-name', 'min_pipes_pipeline']
+    )
+
     return LaunchDescription([
         min_pipes_world,
         min_pipes_environment_spawn,
         min_pipes_objects_spawn,
+        min_pipes_pipeline_spawn,
     ])
