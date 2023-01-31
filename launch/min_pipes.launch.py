@@ -3,8 +3,12 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.conditions import LaunchConfigurationEquals
+from launch.conditions import LaunchConfigurationNotEquals
+from launch.substitutions import LaunchConfiguration
 
 from launch_ros.actions import Node
 
@@ -15,11 +19,27 @@ def generate_launch_description():
 
     world_path = os.path.join(remaro_worlds_path, 'worlds', 'min_pipes.world')
 
+    gui = LaunchConfiguration('gui')
+    gui_arg = DeclareLaunchArgument(
+        'gui',
+        default_value='true',
+        description='Run with gui (true/false)')
+
     min_pipes_world = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
+        condition=LaunchConfigurationEquals('gui', 'true'),
         launch_arguments={
            'gz_args': '-r ' + world_path
+        }.items(),
+    )
+
+    min_pipes_world_no_gui = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
+        condition=LaunchConfigurationEquals('gui', 'false'),
+        launch_arguments={
+           'gz_args': '-s -r ' + world_path
         }.items(),
     )
 
@@ -60,7 +80,9 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        gui_arg,
         min_pipes_world,
+        min_pipes_world_no_gui,
         min_pipes_environment_spawn,
         min_pipes_objects_spawn,
         min_pipes_pipeline_spawn,
