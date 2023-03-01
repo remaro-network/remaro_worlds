@@ -1,4 +1,4 @@
-<robot name="robot">
+<robot name="jenga_wall">
   <link name="jenga_wall_link">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -8,16 +8,15 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://remaro_worlds/models/obstacles/jenga_wall.dae" />
+        <mesh filename="package://remaro_worlds/models/obstacles/jenga_wall/model.dae" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://remaro_worlds/models/obstacles/jenga_wall.dae" />
+        <mesh filename="package://remaro_worlds/models/obstacles/jenga_wall/model.dae" />
       </geometry>
     </collision>
   </link>
-
   <gazebo> <static>true</static></gazebo>
 </robot>

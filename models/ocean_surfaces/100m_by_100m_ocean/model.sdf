@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!-- Copyright (c) TODO
+Based on https://github.com/uuvsimulator/uuv_simulator/tree/master/uuv_gazebo_worlds
+-->
+<sdf version="1.5">
+  <model name="100m_by_100m_ocean">
+    <static>true</static>  
+
+   <link name="link">
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>        
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <box>                        
+            <size>100 100 0.01</size>
+          </box>
+        </geometry>                
+        <material>
+          <script>
+            <uri>file://materials/scripts/water.material</uri>
+            <name>UUVSimulator/StaticTurquoiseWater</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    
+  </model>
+</sdf>

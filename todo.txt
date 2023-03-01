@@ -1,6 +1,8 @@
-need auv subdirectory in models
-move lights from empty_world.world to lit_world.world
-create lit_world.launch
-add inertial data to model.sdf so joints behave correctly
-add joint controller
-create URDF
+simplify collision meshes
+improve/bake materials
+research pros/cons of using world versus urdf files
+replace maze and pipeline with single URDF each
+update maintainer/author info in package.xml et al.
+update copyright details in models.* et al.
+if necessary, update README to state uuv_simulator should be built in same workspace
+if necessary, address error: "Can not find the XML attribute 'version' in sdf XML tag for model: X. Please specify the SDF protocol supported in the model configuration file. The first sdf tag in the config file will be used "
