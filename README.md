@@ -7,9 +7,11 @@
 
 ## Notes
 
+- Gas Infrastructure models are part of the "3D Fuel Tank 4-X" collection created by Mykhailo Ohorodnichuk and currently available for free from [TurboSquid](https://www.turbosquid.com/3d-models/3d-fuel-tank-1443266). In order to use the gas_infrastructure world, as show in the image above, this collection should be, if necessary, and downloaded. Then, the corresponding model.obj and material.png files should be extracted and added to the appropriate models/structures subdirectories.
+
 - Terrains created in [Blender](https://www.blender.org/download/) using the [ANT Landscape](https://docs.blender.org/manual/en/latest/addons/add_mesh/ant_landscape.html) add-on
 
-- CAD models created in [AutoDesk Inventor](https://www.autodesk.com/products/inventor)
+- Other custom CAD models created in [AutoDesk Inventor](https://www.autodesk.com/products/inventor)
 
  - Files and directories created following [this tutorial](http://gazebosim.org/tutorials?tut=ros_roslaunch#CreatingyourownGazeboROSPackage)
 
@@ -52,7 +54,7 @@ echo "source ~/yourworkspacename/devel/setup.bash" >> ~/.bashrc
 ## Usage
 ```bash
 # To launch the simulated world
-roslaunch remaro_worlds min_pipes.launch
+roslaunch remaro_worlds spawn small_pipeline_world.launch
 ```
 
 ## Acknowledgements
