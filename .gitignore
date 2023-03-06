@@ -1,3 +1,7 @@
+.vscode/
+models/structures/*/model.obj
+models/structures/*/material.png
+
 devel/
 logs/
 build/

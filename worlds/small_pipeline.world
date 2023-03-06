@@ -57,11 +57,13 @@ Based on https://github.com/uuvsimulator/uuv_simulator/tree/master/uuv_gazebo_wo
     </light>
 
     <include>
+      <name>ocean_surface</name>
       <uri>model://ocean_surfaces/100m_by_100m_ocean</uri>
       <pose>0 0 0 0 0 0</pose>
     </include>
 
     <include>
+      <name>seafloor</name>
       <uri>model://seafloors/small_pipeline_seafloor</uri>
       <pose>0 0 -20 0 0 1.57</pose>
     </include>

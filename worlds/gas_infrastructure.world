@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<!-- Copyright (c) TODO
+Based on https://github.com/uuvsimulator/uuv_simulator/tree/master/uuv_gazebo_worlds
+-->
+<sdf version="1.4">
+  <world name="small_pipeline_world">
+    <physics name="default_physics" default="true" type="ode">
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>50</iters>
+          <sor>1.2</sor>
+        </solver>
+      </ode>
+    </physics>
+    <scene>
+      <ambient>0.01 0.01 0.01 1.0</ambient>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <shadows>1</shadows>
+      <!-- <fog>
+        <color>0.1 0.2 0.3 1.0</color>
+        <type>linear</type>
+        <density>0.1</density>
+        <start>10</start>
+        <end>40</end>
+      </fog> -->
+    </scene>
+
+    <spherical_coordinates>
+      <latitude_deg>25</latitude_deg>
+      <longitude_deg>-71</longitude_deg>
+    </spherical_coordinates>
+
+    <!-- Global light source -->
+    <light type="directional" name="sun">
+      <pose>0 0 150 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>.1 .1 .1 1</specular>
+      <direction>0.3 0.3 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+    <!-- Global light source -->
+    <light type="directional" name="sun_diffuse">
+      <pose>0 0 -150 0 0 0</pose>
+      <diffuse>0.6 0.6 0.6 1</diffuse>
+      <specular>0 0 0 1</specular>
+      <direction>-0.3 -0.3 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+    <include>
+      <name>ocean_surface</name>
+      <uri>model://ocean_surfaces/100m_by_100m_ocean</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>seafloor</name>
+      <uri>model://seafloors/gas_infrastructure_seafloor</uri>
+      <pose>0 0 -20 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <name>horizontal_tank_pair</name>
+      <uri>model://structures/horizontal_tank_pair</uri>
+      <pose>0 20 -20 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <name>large_vertical_tank</name>
+      <uri>model://structures/large_vertical_tank</uri>
+      <pose>20 7 -19 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <name>platform</name>
+      <uri>model://structures/platform</uri>
+      <pose>0 -20 -19 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>small_vertical_tank</name>
+      <uri>model://structures/small_vertical_tank</uri>
+      <pose>18 -10 -20 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>vertical_tank_quad</name>
+      <uri>model://structures/vertical_tank_quad</uri>
+      <pose>-20 0 -20 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <name>oil_drum</name>
+      <uri>model://objects/oil_drum</uri>
+      <pose>-10.55 9.77 -19.9 4.6 0.7 -0.7</pose>
+    </include>
+    
+    <plugin name="underwater_current_plugin" filename="libuuv_underwater_current_ros_plugin.so">
+      <namespace>hydrodynamics</namespace>
+      <constant_current>
+        <topic>current_velocity</topic>
+        <velocity>
+          <mean>0</mean>
+          <min>0</min>
+          <max>5</max>
+          <mu>0.0</mu>
+          <noiseAmp>0.0</noiseAmp>
+        </velocity>
+
+        <horizontal_angle>
+          <mean>0</mean>
+          <min>-3.141592653589793238</min>
+          <max>3.141592653589793238</max>
+          <mu>0.0</mu>
+          <noiseAmp>0.0</noiseAmp>
+        </horizontal_angle>
+
+        <vertical_angle>
+          <mean>0</mean>
+          <min>-3.141592653589793238</min>
+          <max>3.141592653589793238</max>
+          <mu>0.0</mu>
+          <noiseAmp>0.0</noiseAmp>
+        </vertical_angle>
+      </constant_current>
+    </plugin>
+
+    <plugin name="sc_interface" filename="libuuv_sc_ros_interface_plugin.so"/>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-60 0 2 0 0.3 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
