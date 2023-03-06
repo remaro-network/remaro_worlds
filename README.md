@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-![min_world_far](https://github.com/remaro-network/remaro_worlds/blob/main/imgs/min_world_far.png)
-![min_world_near](https://github.com/remaro-network/remaro_worlds/blob/main/imgs/min_world_near.png)
+![small_pipeline](https://github.com/remaro-network/remaro_worlds/blob/main/imgs/small_pipeline.png)
+![gas_infra](https://github.com/remaro-network/remaro_worlds/blob/main/imgs/gas_infra.png)
 
 ## Notes
 
