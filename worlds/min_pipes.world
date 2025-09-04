@@ -59,6 +59,7 @@
     </light>
 
     <scene>
+      <grid>false</grid>
       <ambient>0.01 0.01 0.01 1.0</ambient>
       <sky>
         <clouds>
