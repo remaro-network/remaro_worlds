@@ -58,6 +58,16 @@
       <cast_shadows>false</cast_shadows>
     </light>
 
+    <include>
+      <uri>model://min_pipes_environment</uri>
+    </include>
+    <include>
+      <uri>model://min_pipes_objects</uri>
+    </include>
+    <include>
+      <uri>model://min_pipes_pipeline</uri>
+    </include>
+
     <scene>
       <grid>false</grid>
       <ambient>0.01 0.01 0.01 1.0</ambient>
